@@ -59,31 +59,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
     <script>
-      TweenMax.to('.logoHeader', 1.5, { scale: 0.8 });
-      TweenMax.from('.logo', 1.5, { opacity: 0,
-        scale: 0.1,
-        delay: 1.5,
-        ease: Bounce.easeOut, });
-      TweenMax.from('.logo1', 0.7, {
+      TweenMax.from('.logoHeader', 1.5, { scale: 0, delay:1.2});
+      TweenMax.from('.logo', 1.5, {
         opacity: 0,
         scale: 0.1,
-        delay: 1.5,
-        ease: Bounce.easeOut,
+        delay: 2.5,
+        ease: Back.easeOut, });
+      TweenMax.from('.logo1', 0.7, {
+        x: -560,
+        y: 750,
+        opacity: 0,
+        scale: 0.1,
+        delay: 2.5,
       });
       TweenMax.from('.spaceship', 0.7, {
+        x: 560,
+        y: -750,
         opacity: 0,
         scale: 0.1,
-        delay: 1.5,
-        ease: Bounce.easeOut,
+        delay: 2.5,
       });
-      TweenMax.from('.background', 60, {
-        rotation: -90,
-        delay: 0.5,
+      TweenMax.from('.background', 1, {
+        scale:0
       });
       TweenMax.from('.btn', 0.5, {
         opacity: 0,
         scale: 0,
-        delay: 1.5,
+        delay: 3,
         ease: Bounce.easeOut,
       });
     </script>
