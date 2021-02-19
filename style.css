@@ -35,7 +35,45 @@ h1 {
   text-decoration: none;
 }
 
+.moon-div {
+  position: absolute !important;
+  left: 10vw !important;
+  top: -20vh !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .moon {
+  position: absolute !important;
+}
+
+.moonlight {
+  position: absolute !important;
+} */
+
 .btn {
+  margin-top: 30vw;
+  position: absolute;
+  z-index: 1;
+  font-size: 30px;
+  color: #fff;
+  /* padding: 20px 30px; */
+  width: 250px;
+  height: 90px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn2 {
+  margin-top: 30vw;
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
   font-size: 30px;
   color: #fff;
   /* padding: 20px 30px; */
