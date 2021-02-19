@@ -158,14 +158,14 @@
         <div class="flex -ml-56"></div>
       </div>
 
-      <div class="moon-div" id="moon-div">
-        <div class="moon" id="moon">
-          <img src="img/moon.svg" alt="" />
-        </div>
-        <div class="moonlight" id="moonlight">
-          <img src="img/moonlight.svg" alt="" />
-        </div>
+      <!-- moon and moonlight -->
+      <div class="moon" id="moon">
+        <img src="img/moon.svg" alt="" />
       </div>
+      <div class="moonlight" id="moonlight">
+        <img src="img/moonlight.svg" alt="" />
+      </div>
+      <!-- <div class="moon-div" id="moon-div"></div> -->
 
       <!-- clouds -->
       <div class="bg-cloud1-div">
@@ -322,7 +322,7 @@
           scale: 0,
         });
         TweenMax.to('#button2', 2, {
-          x: -503,
+          x: -703,
           opacity: 1,
         });
         // document.getElementById('button1').innerHTML = 'Hire Us';
@@ -402,11 +402,13 @@
             x: -770,
           },
           {
-            x: 770,
+            y: -10,
+            x: 790,
             opacity: 1,
           }
         );
 
+        // cloud animation
         TweenMax.fromTo(
           '#bg-cloud1',
           2,
@@ -416,7 +418,7 @@
             delay: 3,
           },
           {
-            x: 550,
+            x: 850,
             delay: 3,
             opacity: 1,
             ease: Back.easeOut,
@@ -431,7 +433,7 @@
             delay: 3,
           },
           {
-            x: 550,
+            x: 750,
             delay: 3,
             opacity: 1,
             ease: Back.easeOut,
@@ -447,7 +449,7 @@
             delay: 3,
           },
           {
-            x: 550,
+            x: 750,
             delay: 3,
             opacity: 1,
             ease: Back.easeOut,
@@ -462,7 +464,7 @@
             delay: 3,
           },
           {
-            x: 550,
+            x: 750,
             delay: 3,
             opacity: 1,
             ease: Back.easeOut,
@@ -477,7 +479,7 @@
             delay: 3,
           },
           {
-            x: 550,
+            x: 750,
             delay: 3,
             opacity: 1,
             ease: Back.easeOut,
