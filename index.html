@@ -166,6 +166,26 @@
           <img src="img/moonlight.svg" alt="" />
         </div>
       </div>
+
+      <!-- clouds -->
+      <div class="bg-cloud1-div">
+        <img id="bg-cloud1" src="img/b_cloud01.svg" alt="" />
+      </div>
+      <div class="bg-cloud2-div">
+        <img id="bg-cloud2" src="img/b_cloud02.svg" alt="" />
+      </div>
+
+      <!-- front clouds -->
+      <div class="fg-cloud1-div">
+        <img id="fg-cloud1" src="img/cloud1.svg" alt="" />
+      </div>
+      <div class="fg-cloud2-div">
+        <img id="fg-cloud2" src="img/cloud2.svg" alt="" />
+      </div>
+      <div class="fg-cloud3-div">
+        <img id="fg-cloud3" src="img/cloud3.svg" alt="" />
+      </div>
+
       <!-- rocket logo -->
       <div class="rLogo">
         <img id="logo1" class="logo1" src="img/Plane.svg" alt="" />
@@ -202,41 +222,57 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
     <script>
-      TweenMax.from('.logoHeader', 1.5, { scale: 0, delay: 1.2 });
-      TweenMax.from('.logo', 1.5, {
-        opacity: 0,
-        scale: 0.1,
-        delay: 2.5,
-        ease: Back.easeOut,
-      });
-      TweenMax.from('.logo1', 0.7, {
-        x: -560,
-        y: 750,
-        opacity: 0,
-        scale: 0.1,
-        delay: 2.5,
-      });
-      TweenMax.from('.spaceship', 0.7, {
-        x: 560,
-        y: -750,
-        opacity: 0,
-        scale: 0.1,
-        delay: 2.5,
-      });
-      TweenMax.from('.background', 1, {
-        scale: 0,
-      });
-      TweenMax.from('.btn', 0.5, {
-        opacity: 0,
-        scale: 0,
-        delay: 3,
-        ease: Bounce.easeOut,
-      });
+      // TweenMax.from('.logoHeader', 1.5, { scale: 0, delay: 1.2 });
+      // TweenMax.from('.logo', 1.5, {
+      //   opacity: 0,
+      //   scale: 0.1,
+      //   delay: 2.5,
+      //   ease: Back.easeOut,
+      // });
+      // TweenMax.from('.logo1', 0.7, {
+      //   x: -560,
+      //   y: 750,
+      //   opacity: 0,
+      //   scale: 0.1,
+      //   delay: 2.5,
+      // });
+      // TweenMax.from('.spaceship', 0.7, {
+      //   x: 560,
+      //   y: -750,
+      //   opacity: 0,
+      //   scale: 0.1,
+      //   delay: 2.5,
+      // });
+      // TweenMax.from('.background', 1, {
+      //   scale: 0,
+      // });
+      // TweenMax.from('.btn', 0.5, {
+      //   opacity: 0,
+      //   scale: 0,
+      //   delay: 3,
+      //   ease: Bounce.easeOut,
+      // });
 
+      // Hidden in the first scene
       TweenMax.to('#moon', 0, {
         opacity: 0,
       });
       TweenMax.to('#moonlight', 0, {
+        opacity: 0,
+      });
+      TweenMax.to('#bg-cloud1', 0, {
+        opacity: 0,
+      });
+      TweenMax.to('#bg-cloud2', 0, {
+        opacity: 0,
+      });
+      TweenMax.to('#fg-cloud1', 0, {
+        opacity: 0,
+      });
+      TweenMax.to('#fg-cloud2', 0, {
+        opacity: 0,
+      });
+      TweenMax.to('#fg-cloud3', 0, {
         opacity: 0,
       });
 
@@ -358,10 +394,95 @@
           delay: 1.3,
         });
 
-        TweenMax.to('#moon', 3, {
-          x: 770,
-          opacity: 1,
-        });
+        // moon animation
+        TweenMax.fromTo(
+          '#moon',
+          3,
+          {
+            x: -770,
+          },
+          {
+            x: 770,
+            opacity: 1,
+          }
+        );
+
+        TweenMax.fromTo(
+          '#bg-cloud1',
+          2,
+          {
+            x: -550,
+            opacity: 0,
+            delay: 3,
+          },
+          {
+            x: 550,
+            delay: 3,
+            opacity: 1,
+            ease: Back.easeOut,
+          }
+        );
+        TweenMax.fromTo(
+          '#bg-cloud2',
+          2,
+          {
+            x: -550,
+            opacity: 0,
+            delay: 3,
+          },
+          {
+            x: 550,
+            delay: 3,
+            opacity: 1,
+            ease: Back.easeOut,
+          }
+        );
+
+        TweenMax.fromTo(
+          '#fg-cloud1',
+          1,
+          {
+            x: 850,
+            opacity: 0,
+            delay: 3,
+          },
+          {
+            x: 550,
+            delay: 3,
+            opacity: 1,
+            ease: Back.easeOut,
+          }
+        );
+        TweenMax.fromTo(
+          '#fg-cloud2',
+          1,
+          {
+            x: 850,
+            opacity: 0,
+            delay: 3,
+          },
+          {
+            x: 550,
+            delay: 3,
+            opacity: 1,
+            ease: Back.easeOut,
+          }
+        );
+        TweenMax.fromTo(
+          '#fg-cloud3',
+          1,
+          {
+            x: 850,
+            opacity: 0,
+            delay: 3,
+          },
+          {
+            x: 550,
+            delay: 3,
+            opacity: 1,
+            ease: Back.easeOut,
+          }
+        );
       }
 
       // function secondPage() {

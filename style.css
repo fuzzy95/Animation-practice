@@ -45,6 +45,49 @@ h1 {
   align-items: center;
 }
 
+/* clouds */
+.cloud-div {
+  position: absolute !important;
+  left: 20vw !important;
+  top: 10vh !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-cloud1-div {
+  margin-left: 330px;
+  position: absolute !important;
+  left: 10vw !important;
+  top: 20vh !important;
+}
+
+.bg-cloud2-div {
+  margin-left: 330px;
+  position: absolute !important;
+  left: -10vw !important;
+  top: 52vh !important;
+}
+
+.fg-cloud1-div {
+  margin-left: 330px;
+  position: absolute !important;
+  left: 20vw !important;
+  top: 40vh !important;
+}
+.fg-cloud2-div {
+  margin-left: 330px;
+  position: absolute !important;
+  left: 5vw !important;
+  top: 67vh !important;
+}
+.fg-cloud3-div {
+  margin-left: 330px;
+  position: absolute !important;
+  left: -10vw !important;
+  top: 30vh !important;
+}
+
 /* .moon {
   position: absolute !important;
 }
