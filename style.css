@@ -36,6 +36,7 @@ h1 {
 }
 
 .moon-div {
+  /* opacity: 0; */
   position: absolute !important;
   left: 10vw !important;
   top: -20vh !important;
