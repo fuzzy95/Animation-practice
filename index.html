@@ -14,15 +14,33 @@
     <title>ProjectX</title>
   </head>
   <body>
+    <!-- hamburger menu -->
+    <div class="overlay bg-black opacity-90 absolute h-screen w-screen">
+      <div class="p-10 flex flex-col items-center w-full">
+        <img
+          class="text-black self-end exit-button cursor-pointer"
+          src="img/HAM.svg"
+          alt=""
+        />
+        <div
+          class="text-white flex flex-col items-center text-4xl mt-20 flex flex-col space-y-10 menu-container"
+        >
+          <button>Who We Are</button>
+          <button>services</button>
+          <button>Experieces</button>
+          <button>Contact Us</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- main content -->
     <div class="wrapper">
       <div class="content">
+        <h2 id="logoHeader" class="logoHeader">Welcome Gorgeous Peoples in,</h2>
+        <div id="logoHeaderimg" class="logoHeaderimg fixed">
+          <img src="img/Scroll.svg" alt="" />
+        </div>
         <div class="logoDiv">
-          <h2 id="logoHeader" class="logoHeader">
-            Welcome Gorgeous Peoples in,
-          </h2>
-          <div id="logoHeaderimg" class="logoHeaderimg">
-            <img src="img/Scroll.svg" alt="" />
-          </div>
           <div id="logo" class="logo">
             <svg
               width="819"
@@ -203,7 +221,7 @@
     </div>
 
     <!-- Second page texts -->
-    <section class="second-page-menu">
+    <section class="second-page-menu fixed">
       <img class="w-12" src="img/Menu.svg" alt="" />
     </section>
     <section class="second-page">
@@ -212,7 +230,9 @@
         <ul class="flex items-center space-x-4">
           <li class="cursor-pointer"><img src="img/Dribbble.svg" alt="" /></li>
           <li class="cursor-pointer"><img src="img/Twitter.svg" alt="" /></li>
-          <li class="cursor-pointer"><img src="img/Burger.svg" alt="" /></li>
+          <li class="cursor-pointer">
+            <img class="nav-button" src="img/Burger.svg" alt="" />
+          </li>
         </ul>
       </nav>
     </section>
@@ -246,7 +266,7 @@
     <div class="input-box w-1/4 flex items-center">
       <input
         placeholder="Say hello..."
-        class="bg-black rounded-full py-4 pl-4 pr-20 border border-white text-white focus:none w-full"
+        class="bg-black rounded-full py-4 pl-4 pr-16 border border-white text-white focus:outline-none w-full"
         type="text"
       />
       <div class="input-box-button -ml-12">
@@ -254,39 +274,75 @@
       </div>
     </div>
 
+    <!-- javascripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
     <script>
-      TweenMax.from('.logoHeader', 1.5, { scale: 0, delay: 1.2 });
-      TweenMax.from('.logo', 1.5, {
-        opacity: 0,
-        scale: 0.1,
-        delay: 2.5,
-        ease: Back.easeOut,
-      });
-      TweenMax.from('.logo1', 0.7, {
-        x: -560,
-        y: 750,
-        opacity: 0,
-        scale: 0.1,
-        delay: 2.5,
-      });
-      TweenMax.from('.spaceship', 0.7, {
-        x: 560,
-        y: -750,
-        opacity: 0,
-        scale: 0.1,
-        delay: 2.5,
-      });
-      TweenMax.from('.background', 1, {
-        scale: 0,
-      });
-      TweenMax.from('.btn', 0.5, {
-        opacity: 0,
-        scale: 0,
-        delay: 3,
-        ease: Bounce.easeOut,
-      });
+      // const button = document.querySelector('.nav-button');
+      // const overlay = document.querySelector('.overlay');
+      // const exit = document.querySelector('.exit-button');
+
+      // var tl = TweenMax.timeline({
+      //   defaults: {
+      //     duration: 1,
+      //     ease: Back.easeOut.config(2),
+      //   },
+      // });
+
+      // tl.paused(true);
+
+      // TweenMax.to('.overlay', { clipPath: 'circle(100%)' });
+      // TweenMax.to('.menu-container', { opacity: 1, y: '30px' });
+
+      // button.addEventListener('click', () => {
+      //   TweenMax.to('.overlay', { clipPath: 'circle(100%)' });
+      //   TweenMax.to('.menu-container', { opacity: 1, y: '30px' });
+      // });
+
+      // function open() {
+      //   Tweenmax.to('.overlay', 3, {
+      //     opacity: 1,
+      //     scale: 1,
+      //   });
+      // }
+
+      // function close() {
+      //   TweenMax.to('.overlay', 0, {
+      //     opacity: 0,
+      //     scale: 0,
+      //   });
+      // }
+
+      // TweenMax.from('.logoHeader', 1.5, { scale: 0, delay: 1.2 });
+      // TweenMax.from('.logo', 1.5, {
+      //   opacity: 0,
+      //   scale: 0.1,
+      //   delay: 2.5,
+      //   ease: Back.easeOut,
+      // });
+      // TweenMax.from('.logo1', 0.7, {
+      //   x: -560,
+      //   y: 750,
+      //   opacity: 0,
+      //   scale: 0.1,
+      //   delay: 2.5,
+      // });
+      // TweenMax.from('.spaceship', 0.7, {
+      //   x: 560,
+      //   y: -750,
+      //   opacity: 0,
+      //   scale: 0.1,
+      //   delay: 2.5,
+      // });
+      // TweenMax.from('.background', 1, {
+      //   scale: 0,
+      // });
+      // TweenMax.from('.btn', 0.5, {
+      //   opacity: 0,
+      //   scale: 0,
+      //   delay: 3,
+      //   ease: Bounce.easeOut,
+      // });
 
       // Hidden in the first scene
       TweenMax.to('#moon', 0, {
@@ -327,6 +383,7 @@
       });
 
       function landingPage() {
+        document.querySelector('body').style.overflowY = 'scroll';
         // logo Header
         TweenMax.to('#logoHeader', 3, {
           x: -450,
@@ -336,7 +393,7 @@
           scale: 0,
         });
         TweenMax.to('#logoHeaderimg', 3, {
-          x: -590,
+          x: -620,
           y: 400,
           opacity: 1,
           rotation: 90,
@@ -455,11 +512,13 @@
           '#moon',
           2,
           {
-            x: -770,
+            opacity: 0,
+            scale: 0,
           },
           {
             x: 770,
             opacity: 1,
+            scale: 1,
           }
         );
 
@@ -542,7 +601,7 @@
           }
         );
 
-        //second pahe navbar
+        //second page navbar
         TweenMax.to('.second-page', 3, {
           x: 1250,
           opacity: 1,
@@ -599,7 +658,7 @@
           opacity: 0,
         });
         TweenMax.to('#moonlight', 1, {
-          opacity: 0,
+          opacity: 0.4,
           delay: 0.3,
         });
 
@@ -633,7 +692,7 @@
           }
         );
 
-        //inpur field
+        //input field
         TweenMax.fromTo(
           '.input-box',
           0.5,

@@ -23,6 +23,14 @@ h1 {
   color: #fff;
 }
 
+.overlay {
+  /* clip-path: circle(0%); */
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
 .content {
   height: 100vh;
   display: flex;
@@ -144,13 +152,13 @@ h1 {
   font-size: 40px;
   color: #fff;
   position: absolute;
-  margin-top: -155px;
-  margin-left: -100px;
+  margin-top: -310px;
+  margin-left: -260px;
 }
 .logoHeaderimg {
   position: absolute;
-  margin-top: -145px;
-  margin-left: -100px;
+  margin-top: -310px;
+  margin-left: -260px;
   opacity: 0;
 }
 
