@@ -144,7 +144,7 @@ h1 {
   font-size: 40px;
   color: #fff;
   position: absolute;
-  margin-top: -145px;
+  margin-top: -155px;
   margin-left: -100px;
 }
 .logoHeaderimg {
@@ -254,8 +254,8 @@ nav ul li img {
   left: 73vw;
 }
 
-.inpur-box {
+.input-box {
   position: absolute;
-  top: 90vh;
-  left: 73vw;
+  top: 86vh;
+  left: 70vw;
 }

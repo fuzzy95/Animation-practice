@@ -243,8 +243,15 @@
       <img class="w-56" src="img/hireuspage/Group 100.svg" alt="" />
     </div>
 
-    <div class="input-box">
-      <input type="text" />
+    <div class="input-box w-1/4 flex items-center">
+      <input
+        placeholder="Say hello..."
+        class="bg-black rounded-full py-4 pl-4 pr-20 border border-white text-white focus:none w-full"
+        type="text"
+      />
+      <div class="input-box-button -ml-12">
+        <img class="w-8" src="img/hireuspage/Group 43.svg" alt="" />
+      </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
@@ -313,6 +320,9 @@
         opacity: 0,
       });
       TweenMax.to('.hireus-bot', 0, {
+        opacity: 0,
+      });
+      TweenMax.to('.input-box', 0, {
         opacity: 0,
       });
 
@@ -620,6 +630,20 @@
             opacity: 1,
             delay: 2,
             ease: Back.easeOut,
+          }
+        );
+
+        //inpur field
+        TweenMax.fromTo(
+          '.input-box',
+          0.5,
+          {
+            scale: 0,
+          },
+          {
+            opacity: 1,
+            delay: 2,
+            scale: 1,
           }
         );
       }
