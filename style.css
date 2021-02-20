@@ -111,6 +111,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 101;
 }
 
 .btn2 {
@@ -129,6 +130,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 }
 
 .logoDiv {
@@ -144,6 +146,12 @@ h1 {
   position: absolute;
   margin-top: -145px;
   margin-left: -100px;
+}
+.logoHeaderimg {
+  position: absolute;
+  margin-top: -145px;
+  margin-left: -100px;
+  opacity: 0;
 }
 
 .logo {
@@ -223,6 +231,11 @@ nav ul li img {
   top: 8vh;
 }
 
+.second-page-menu {
+  position: absolute;
+  top: 20vh;
+}
+
 .second-page-text {
   position: absolute;
   top: 25vh;
@@ -232,4 +245,11 @@ nav ul li img {
 .second-page-text-header {
   line-height: 80px;
   font-size: 4rem;
+}
+
+/* third page */
+.hireus-bot {
+  position: absolute;
+  top: 30vh;
+  left: 73vw;
 }

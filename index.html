@@ -20,6 +20,9 @@
           <h2 id="logoHeader" class="logoHeader">
             Welcome Gorgeous Peoples in,
           </h2>
+          <div id="logoHeaderimg" class="logoHeaderimg">
+            <img src="img/Scroll.svg" alt="" />
+          </div>
           <div id="logo" class="logo">
             <svg
               width="819"
@@ -200,6 +203,9 @@
     </div>
 
     <!-- Second page texts -->
+    <section class="second-page-menu">
+      <img class="w-12" src="img/Menu.svg" alt="" />
+    </section>
     <section class="second-page">
       <nav id="navdiv" class="flex justify-end items-center space-x-4 navdiv">
         <h1 class="navtext text-gray-500 text-xl">Follow us</h1>
@@ -210,6 +216,7 @@
         </ul>
       </nav>
     </section>
+
     <section class="second-page-text">
       <div>
         <div class="text-gray-600 flex space-x-3">
@@ -231,60 +238,44 @@
       </div>
     </section>
 
-    <!-- <section class="secondscene px-20 mt-20" id="scene">
-      <nav class="flex justify-end items-center space-x-4">
-        <h1 class="navtext text-gray-600">Follow us</h1>
-        <ul class="flex items-center space-x-4">
-          <li><img src="img/Dribbble.svg" alt="" /></li>
-          <li><img src="img/Twitter.svg" alt="" /></li>
-          <li><img src="img/Burger.svg" alt="" /></li>
-        </ul>
-      </nav>
-      <div class="text-white absolute ml-16">Empowered by Innovation</div>
-
-      <div class="mt-16">
-        <p class="text-gray-600">
-          <span class="inline-block h-1 w-6 rounded bg-gray-600" />
-          <p class="text-gray-600">Creative ideas</p>
-        </p>
-        <h1>A Creative IT Solutions</h1>
-      </div>
-      <div class="background"></div>
-    </section> -->
+    <!-- third page contents -->
+    <div class="hireus-bot">
+      <img class="w-56" src="img/hireuspage/Group 100.svg" alt="" />
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
     <script>
-      // TweenMax.from('.logoHeader', 1.5, { scale: 0, delay: 1.2 });
-      // TweenMax.from('.logo', 1.5, {
-      //   opacity: 0,
-      //   scale: 0.1,
-      //   delay: 2.5,
-      //   ease: Back.easeOut,
-      // });
-      // TweenMax.from('.logo1', 0.7, {
-      //   x: -560,
-      //   y: 750,
-      //   opacity: 0,
-      //   scale: 0.1,
-      //   delay: 2.5,
-      // });
-      // TweenMax.from('.spaceship', 0.7, {
-      //   x: 560,
-      //   y: -750,
-      //   opacity: 0,
-      //   scale: 0.1,
-      //   delay: 2.5,
-      // });
-      // TweenMax.from('.background', 1, {
-      //   scale: 0,
-      // });
-      // TweenMax.from('.btn', 0.5, {
-      //   opacity: 0,
-      //   scale: 0,
-      //   delay: 3,
-      //   ease: Bounce.easeOut,
-      // });
+      TweenMax.from('.logoHeader', 1.5, { scale: 0, delay: 1.2 });
+      TweenMax.from('.logo', 1.5, {
+        opacity: 0,
+        scale: 0.1,
+        delay: 2.5,
+        ease: Back.easeOut,
+      });
+      TweenMax.from('.logo1', 0.7, {
+        x: -560,
+        y: 750,
+        opacity: 0,
+        scale: 0.1,
+        delay: 2.5,
+      });
+      TweenMax.from('.spaceship', 0.7, {
+        x: 560,
+        y: -750,
+        opacity: 0,
+        scale: 0.1,
+        delay: 2.5,
+      });
+      TweenMax.from('.background', 1, {
+        scale: 0,
+      });
+      TweenMax.from('.btn', 0.5, {
+        opacity: 0,
+        scale: 0,
+        delay: 3,
+        ease: Bounce.easeOut,
+      });
 
       // Hidden in the first scene
       TweenMax.to('#moon', 0, {
@@ -314,17 +305,30 @@
       TweenMax.to('.second-page-text', 0, {
         opacity: 0,
       });
+      TweenMax.to('.second-page-menu', 0, {
+        opacity: 0,
+      });
+      TweenMax.to('.hireus-bot', 0, {
+        opacity: 0,
+      });
 
       function landingPage() {
         // logo Header
         TweenMax.to('#logoHeader', 3, {
           x: -450,
           y: 250,
+          opacity: 0,
+          rotation: 90,
+          scale: 0,
+        });
+        TweenMax.to('#logoHeaderimg', 3, {
+          x: -590,
+          y: 400,
           opacity: 1,
           rotation: 90,
         });
-        document.getElementById('logoHeader').innerHTML = 'Scroll Down';
 
+        // rocket
         TweenMax.to('#logo1', 2.7, {
           x: 560,
           y: -750,
@@ -364,8 +368,6 @@
           x: -503,
           opacity: 1,
         });
-        // document.getElementById('button1').innerHTML = 'Hire Us';
-        // document.getElementById('btn').className = '.btn2';
 
         // logo animation
         TweenMax.to('#logo', 3, {
@@ -427,6 +429,7 @@
           opacity: 1,
         });
 
+        // moonlight
         TweenMax.to('#moonlight', 4, {
           x: 50,
           opacity: 1,
@@ -446,6 +449,7 @@
           }
         );
 
+        // back clouds
         TweenMax.fromTo(
           '#bg-cloud1',
           2,
@@ -523,27 +527,97 @@
           }
         );
 
+        //second pahe navbar
         TweenMax.to('.second-page', 3, {
           x: 1250,
           opacity: 1,
           delay: 1,
         });
 
+        // second page texts
         TweenMax.to('.second-page-text', 3, {
           x: 198,
           opacity: 1,
           delay: 1,
         });
+        // second page dropdown nav
+        TweenMax.to('.second-page-menu', 3, {
+          x: 30,
+          opacity: 1,
+          delay: 1,
+        });
       }
 
-      // function secondPage() {
-      //   TweenMax.to('#logo', 3, {
-      //     x: -803,
-      //     y: -850,
-      //     opacity: 0,
-      //     scale: 0.3,
-      //   });
-      // }
+      function secondPage() {
+        // back clouds
+        TweenMax.to('#bg-cloud1', 2, {
+          x: 950,
+          opacity: 0,
+          ease: Back.easeOut,
+        });
+        TweenMax.to('#bg-cloud2', 2, {
+          x: 950,
+          opacity: 0,
+          ease: Back.easeOut,
+        });
+
+        // front clouds
+        TweenMax.to('#fg-cloud1', 3, {
+          x: -950,
+          opacity: 0,
+          ease: Back.easeOut,
+        });
+        TweenMax.to('#fg-cloud2', 3, {
+          x: -950,
+          opacity: 0,
+          ease: Back.easeOut,
+        });
+        TweenMax.to('#fg-cloud3', 3, {
+          x: -950,
+          opacity: 0,
+          ease: Back.easeOut,
+        });
+
+        //moon and moonlight
+        TweenMax.to('#moon', 2, {
+          y: 770,
+          opacity: 0,
+        });
+        TweenMax.to('#moonlight', 1, {
+          opacity: 0,
+          delay: 0.3,
+        });
+
+        //background stars
+        TweenMax.to('#background', 2.7, {
+          rotation: 180,
+          scale: 0.8,
+        });
+
+        //ufo
+        TweenMax.to('#spaceship', 3, {
+          x: -600,
+          y: 60,
+          rotation: -30,
+          scale: 1,
+        });
+
+        //bot
+        TweenMax.fromTo(
+          '.hireus-bot',
+          1,
+          {
+            scale: 0,
+            opacity: 1,
+          },
+          {
+            scale: 1,
+            opacity: 1,
+            delay: 2,
+            ease: Back.easeOut,
+          }
+        );
+      }
     </script>
   </body>
 </html>
