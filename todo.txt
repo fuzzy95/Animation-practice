@@ -22,3 +22,7 @@
     -> position fixed
 
 -> Add Go Back button for third page
+
+-> Color combination and reasons
+-> Resources
+
