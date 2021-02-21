@@ -183,6 +183,7 @@ h1 {
   top: 0;
   left: 0;
   z-index: -1;
+  position: fixed;
 }
 
 .rLogo {
@@ -266,4 +267,35 @@ nav ul li img {
   position: absolute;
   top: 86vh;
   left: 70vw;
+}
+
+/* -----------------------------4th page starts------------------------ */
+.fourth-page-text {
+  position: absolute;
+  top: 122vh;
+  left: 61vw;
+}
+
+/* -----------------------------5th page starts------------------------ */
+.fifth-page-section {
+  position: absolute;
+  top: 228%;
+  left: 13%;
+  width: 80%;
+}
+
+.cards-odd {
+  width: 346px;
+  height: 420px;
+  background: -webkit-linear-gradient(top left, #0a0c14, #020203);
+  background: -moz-linear-gradient(top left, #0a0c14, #020203);
+  background: linear-gradient(to top left, #0a0c14, #020203);
+}
+
+.cards-even {
+  width: 346px;
+  height: 420px;
+  background: -webkit-linear-gradient(top left, #020203, #0a0c14);
+  background: -moz-linear-gradient(top left, #020203, #0a0c14);
+  background: linear-gradient(to top left, #020203, #0a0c14);
 }
