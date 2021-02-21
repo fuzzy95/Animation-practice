@@ -272,8 +272,8 @@ nav ul li img {
 /* -----------------------------4th page starts------------------------ */
 .fourth-page-text {
   position: absolute;
-  top: 122vh;
-  left: 61vw;
+  top: 122%;
+  left: 61%;
 }
 
 /* -----------------------------5th page starts------------------------ */
@@ -298,4 +298,16 @@ nav ul li img {
   background: -webkit-linear-gradient(top left, #020203, #0a0c14);
   background: -moz-linear-gradient(top left, #020203, #0a0c14);
   background: linear-gradient(to top left, #020203, #0a0c14);
+}
+
+/* -----------------------------6th page starts------------------------ */
+.sixth-page-contents {
+  position: absolute;
+  height: 100vh;
+}
+
+.sixth-page-text {
+  position: absolute;
+  top: 322%;
+  left: 61%;
 }
